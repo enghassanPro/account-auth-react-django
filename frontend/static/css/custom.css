@@ -1,0 +1,144 @@
+.header-left-bottom input[type="text"] {
+    outline: none;
+    font-size: 15px;
+    color: #222;
+	border:none;
+    width: 90%;
+    display: inline-block;
+    background: transparent;
+    letter-spacing: 1px;
+}
+.register{
+    padding: 0;
+}
+
+.register-main-icon {
+    text-align: center;
+    margin-bottom: -28px;
+    margin-top: -28px;
+}
+.register-main-icon span.fa{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 1em;
+}
+@media(max-width:384px){
+	.register-main-icon .span.fa{
+		margin-bottom: .6em;
+    }
+}
+.links p.center {
+	text-align: right;
+}
+.err-msg
+{
+  z-index: 2;
+  width: 360px;
+  margin: -24px;
+  position: relative;
+  display: none;
+  top:24px;
+  left: 383px;
+  padding: 10px;
+  border: none;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background-color: rgb(211, 46, 46);
+  animation-name: errMsg;
+  animation-iteration-count: 1;
+  animation-duration: 2s ;
+
+
+  }
+
+@keyframes errMsg{
+    0%{
+        left: 388px;
+    }
+    10%{
+        left: 380px
+    }
+    20%{
+        left: 388px
+    }
+    30%{
+        left:380px;
+    }
+    40%{
+        left: 388px
+    }
+    50%{
+        left:380px
+    }
+    60%{
+        left:388px
+    }
+    70%{
+        left:380px
+    }
+    80%{
+        left:388px
+    }
+    90%{
+        left:380px
+    }
+    100%{
+        left: 385px;
+
+    }
+}
+
+.err-msg:before{
+    z-index: 1;
+    position: absolute;
+    content: "";
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgb(211, 46, 46);
+    top: 18px;
+    color: rgba(0,0,0,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: none;
+    -webkit-transform: rotateZ(-35deg) translateX(-5px) skewX(-35deg);
+    transform: rotateZ(-35deg) translateX(-5px) skewX(-35deg);
+}
+.hide-err{
+    transition: 2s ease-out;
+    display: none;
+}
+
+.msg-done{
+    width: 50%;
+    position: absolute;
+    margin-left: 27%;
+    z-index: 333;
+    text-align: center;
+    animation-name: hideMsg;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    display: none;
+}
+.msg-warn{
+    width: 50%;
+    position: absolute;
+    margin-left: 27%;
+    z-index: 333;
+    text-align: center;
+    display: none;
+}
+
+@keyframes hideMsg{
+    100%{
+        opacity: 0;
+        transition: 3s ease-out;
+        
+    }
+}
